@@ -2081,6 +2081,7 @@ textarea {
 }
 .form__button {
   margin-top: 20px;
+  text-align: center;
 }
 .form__resetpass {
   color: $blue;
@@ -3440,6 +3441,89 @@ section.section--form .section__body {
   section.section--form .section__body {
     padding: 20px;
   }
+}
+section.section--form .section__body .section__inputfile {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  color: #252525;
+  margin-top: 20px;
+}
+section.section--form .section__body .section__inputfile .section__inputfile__input {
+  position: relative;
+  background-color: #f56200;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 250px;
+  height: 250px;
+  text-align: center;
+  color: #fff;
+}
+section.section--form .section__body .section__inputfile .section__inputfile__input input {
+  opacity: 0;
+  height: 0;
+  cursor: pointer;
+}
+section.section--form .section__body .section__inputfile .section__inputfile__input input:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+section.section--form .section__body .section__inputfile .section__inputfile__images {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  justify-items: center;
+  -ms-flex-align: center;
+      align-items: center;
+  background-color: #ffbb8e;
+  padding: 20px;
+  border-radius: 0 10px 10px 0;
+}
+section.section--form .section__body .section__inputfile .section__inputfile__images .section__inputfile__images__flex {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  margin-bottom: 20px;
+}
+section.section--form .section__body .section__inputfile .section__inputfile__images .section__inputfile__images__flex .section__inputfile__image {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border-radius: 5px;
+  border: 2px dashed #252525;
+  margin-right: 10px;
+}
+section.section--form .section__body .section__inputfile .section__inputfile__images .section__inputfile__images__flex .section__inputfile__image:last-child {
+  margin-right: 0;
+}
+section.section--form .section__body .section__inputfile .section__inputfile__images p {
+  margin-bottom: 0;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #252525;
+  opacity: 1;
 }
 section.section--form .section__images .section__image.section__image--1 {
   position: absolute;

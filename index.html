@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <link href="img/favicon.png" rel="shortcut icon">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href="css/main.css?v=35938" rel="stylesheet" type="text/css">
-    <script src="js/main.js?v=35938" type="text/javascript"></script>
+    <link href="css/main.css?v=14201" rel="stylesheet" type="text/css">
+    <script src="js/main.js?v=14201" type="text/javascript"></script>
     <!-- Meta tags facebook-->
     <meta property="og:title" content="#">
     <meta property="og:description" content="#">
@@ -153,7 +153,7 @@
             <h3 class="h1 section__title">Retapizalo</h3>
             <p>* Describenos el estado actual de tu mueble y explícanos como te gustaría que quedara. Nos ayudara a entender tus expectativas y ofrecerte la mejor solución posible.*</p>
             <div class="section__form">
-              <form action="#" class="form">
+              <form id="imageForm" enctype="multipart/form-data" class="form">
                 <div class="cols">
                   <div class="col-md-6"> 
                     <div class="form__element">
@@ -199,7 +199,24 @@
                     <div class="form__element">
                       <div class="form__title">Comentarios </div>
                       <div class="form__input"> 
-                        <textarea type="text" name="#"> </textarea>
+                        <textarea type="text" name="#"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="section__inputfile">
+                      <div class="section__inputfile__input">
+                        <input type="file" id="imageInput" accept="image/*" multiple>
+                        <div class="section__inputfile__icon"> <img src="img/icons/icon-download.png"></div>
+                        <p>Sube fotos de tu mueble (Máximo 3 imagenes)</p>
+                      </div>
+                      <div class="section__inputfile__images">
+                        <div id="previewContainer" class="section__inputfile__images__flex">
+                          <div class="section__inputfile__image"></div>
+                          <div class="section__inputfile__image"></div>
+                          <div class="section__inputfile__image"></div>
+                        </div>
+                        <p>Máximo 3 imágenes</p>
                       </div>
                     </div>
                   </div>

@@ -4094,7 +4094,35 @@ app.bg = {
 };
 
 app.common = {
-  init: function() {}
+  init: function() {
+    $('#imageInput').on('change', function() {
+      var file, files, i, len, results;
+      $('#previewContainer').empty();
+      files = Array.from(this.files).slice(0, 3);
+      results = [];
+      for (i = 0, len = files.length; i < len; i++) {
+        file = files[i];
+        if (file.type.startsWith('image/')) {
+          results.push((function(file) {
+            var reader;
+            reader = new FileReader();
+            reader.readAsDataURL(file);
+            return reader.onload = function() {
+              var previewImage;
+              previewImage = $('<img>').addClass('section__inputfile__image').attr('src', reader.result);
+              return $('#previewContainer').append(previewImage);
+            };
+          })(file));
+        } else {
+          results.push(void 0);
+        }
+      }
+      return results;
+    });
+    return $('#imageForm').on('submit', function(event) {
+      return event.preventDefault();
+    });
+  }
 };
 
 app.forms = {
